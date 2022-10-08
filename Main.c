@@ -16,12 +16,12 @@ int main(int argc, char** argv) {
 
     char Line[256];
     while (fgets(Line, sizeof(Line), file)) {
-        if (strncmp(Line, "print (\"", strlen("print (\"")) == 0) {
-            char* Arg = Line + strlen("print (\"");
-            if (Arg[strlen(Arg)-4] =! "\")") {}
+        if (strncmp(Line, "log[\"", strlen("log[\"")) == 0) {
+            char* Arg = Line + strlen("log[\"");
+            if (Arg[strlen(Arg)-4] =! "\"];") {}
             
             printf("%s\n", Arg);
-        } else {
+		} else {
             printf("Syntax error at: %s\n", Line);
             return -1;
         }

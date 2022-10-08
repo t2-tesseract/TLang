@@ -1,0 +1,19 @@
+# Import a library or another tlang file.
+## File:
+import["import/import1.tlang"];
+## Library:
+import[Library1];
+
+class Name:Type {
+	# This is a comment.
+	log["This is a print function."];
+	
+	# List of variable types: Int, Float, String, Char, Bool, and Auto.
+	function Name[var argument:Auto; var arugment2:Auto] {
+		# Initialize a variable.
+		var calculate:Auto = argument + arugment2;
+		
+		# Return a value.
+		return[calculate];
+	];
+};
