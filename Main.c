@@ -18,9 +18,12 @@ int main(int argc, char** argv) {
     while (fgets(Line, sizeof(Line), file)) {
         if (strncmp(Line, "log[\"", strlen("log[\"")) == 0) {
             char* Arg = Line + strlen("log[\"");
-            if (Arg[strlen(Arg)-4] =! "\"];") {}
+            if (Arg[strlen(Arg)-3] =! "\"];") {}
             
             printf("%s\n", Arg);
+		} else if (strncmp(Line, "#", strlen("#")) == 0) {
+            char* Arg = Line + strlen("#");
+			if (Arg[strlen(Arg)] =! "\n") {}
 		} else {
             printf("Syntax error at: %s\n", Line);
             return -1;
