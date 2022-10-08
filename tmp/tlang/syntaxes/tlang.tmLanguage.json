@@ -1,0 +1,38 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "TLang Programming Language",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.tlang",
+				"match": "\\b(if|while|for|return)\\b"
+			}]
+		},
+		"reserved-words": {
+			"patterns": [{
+				"name": "entity.name.function.member.tlang",
+				"match": "\\b(print)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.tlang",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.tlang",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.tlang"
+}

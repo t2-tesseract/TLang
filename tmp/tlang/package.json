@@ -1,0 +1,25 @@
+{
+  "name": "tlang",
+  "displayName": "TLang",
+  "description": "TLang Programming Language",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.72.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "tlang",
+      "aliases": ["TLang Programming Language", "tlang"],
+      "extensions": [".tlang"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "tlang",
+      "scopeName": "source.tlang",
+      "path": "./syntaxes/tlang.tmLanguage.json"
+    }]
+  }
+}
