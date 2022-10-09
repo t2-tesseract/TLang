@@ -24,6 +24,8 @@ int main(int argc, char** argv) {
 		} else if (strncmp(Line, "#", strlen("#")) == 0) {
             char* Arg = Line + strlen("#");
 			if (Arg[strlen(Arg)] =! "\n") {}
+		} else if (strncmp(Line, "\n", strlen("\n")) == 0) {
+            // do nothing
 		} else {
             printf("Syntax error at: %s\n", Line);
             return -1;
